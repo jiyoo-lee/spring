@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans:beans
+xmlns="http://www.springframework.org/schema/mvc"
+xmlns:beans="http://www.springframework.org/schema/beans"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation=
+"http://www.springframework.org/schema/mvc
+https://www.springframework.org/schema/mvc/spring-mvc.xsd
+http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+https://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- 기본 공통적인 부분을 적용시킴(mapping) -->
+<annotation-driven></annotation-driven>
+<default-servlet-handler/> <!-- servlet class를 전반적으로 handling하도록 하는 지시어 -->
+
+
+<!-- class에서 해당 jsp로 자동 연결되도록 하는 설정 태그 -->
+ <view-resolvers> 
+ <jsp prefix ="/WEB-INF/" suffix=".jsp"></jsp> 
+ </view-resolvers>
+ <context:component-scan base-package="test3"></context:component-scan>
+
+<!-- Controller 이름을 정해주셔야 합니다. -->
+<!-- <beans:bean class="test3.getinfo"></beans:bean> -->
+<!-- <beans:bean class="test3.t1"></beans:bean> -->
+
+<!-- Controller가 많아서 다수를 지정해야할때-->
+<!-- <context:component-scan base-package="test3"></context:component-scan> -->
+
+</beans:beans>
