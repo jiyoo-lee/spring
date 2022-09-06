@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert method 연습</title>
+<title>select4.java와 연계 lombok으로 jdbc 연결</title>
 </head>
 <body>
-[insert query]데이터가 정상적으로 등록되었습니다. ${result} 
+
 </body>
 </html>

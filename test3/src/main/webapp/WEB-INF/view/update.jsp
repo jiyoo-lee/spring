@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert method 연습</title>
+<title>Update 화면</title>
 </head>
 <body>
-[insert query]데이터가 정상적으로 등록되었습니다. ${result} 
+UPDATE ${result}
+정상적으로 수정되었습니다.
 </body>
 </html>

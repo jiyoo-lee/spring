@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert method 연습</title>
+<title>select Query DTO, DAO 이용한 코드 구현(select2.java와 연결)</title>
 </head>
 <body>
-[insert query]데이터가 정상적으로 등록되었습니다. ${result} 
+<h1>데이터의 개수 : ${result} </h1>
 </body>
 </html>

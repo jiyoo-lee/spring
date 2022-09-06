@@ -19,13 +19,9 @@ https://www.springframework.org/schema/context/spring-context.xsd">
 
 <!-- class에서 해당 jsp로 자동 연결되도록 하는 설정 태그 -->
  <view-resolvers> 
- <jsp prefix ="/WEB-INF/" suffix=".jsp"></jsp> 
+ <jsp prefix ="/WEB-INF/" suffix=".jsp"></jsp>
  </view-resolvers>
-<beans:bean class="test3.api"></beans:bean>
-<beans:bean class="test3.upload"></beans:bean>
-<beans:bean class="test3.fileupload"></beans:bean>
-<beans:bean class="test3.dbqueries"></beans:bean>
-
+ <context:component-scan base-package="test3"></context:component-scan>
 
 <!-- Controller 이름을 정해주셔야 합니다. -->
 <!-- <beans:bean class="test3.getinfo"></beans:bean> -->

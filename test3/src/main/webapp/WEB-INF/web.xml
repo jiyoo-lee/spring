@@ -22,7 +22,7 @@
   	<param-name>contextConfigLocation</param-name>
   	<param-value>
   	<!-- 어떤 파일과 연결을 할 것인지 -->
-  	/WEB-INF/fileupload/fileup.xml
+  	/WEB-INF/spring/root-context.xml
   	/WEB-INF/mapping/mapping.xml
   	/WEB-INF/dbconnect/dbconnect.xml
   	</param-value>

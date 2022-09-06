@@ -13,8 +13,9 @@
 		">
 		<!-- destroy-method : DB에 대한 접속 쿼리가 끝날 경우 자동으로 종료 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
- 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-		<property name="url" value="jdbc:mysql://umj7-009.cafe24.com/jeeyulee"/> 
+ 		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+<!--  		<property name="url" value="jdbc:mysql://localhost:3306/webmail"></property> -->
+ 		<property name="url" value="jdbc:mysql://umj7-009.cafe24.com/jeeyulee"></property>
 		<property name="username" value="jeeyulee"/>
  		<property name="password" value="jeeyu9400"/> 
 	</bean>
