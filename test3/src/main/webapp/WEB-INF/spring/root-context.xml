@@ -25,13 +25,13 @@
 		
 		<!-- SQL 실행에 대한 모든 객체를 연결하는 공간(가장 중요 사항) 
 			configLocation : mybatis 전용 기본설정 사항
-			mapperLocation : sql 문법을 mapping해주는 공간
+			mapperLocationS : sql 문법을 mapping해주는 공간
 		-->
 		<!-- sqlSessionFactory -->
 		<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
- 		<property name="configLocation" value="classpath:/META-INF/mybatisConfig.xml"/> 
- 		<property name="mapperLocations" value="classpath:/META-INF/mybatisMapper.xml"></property> 
+  		<property name="configLocation" value="classpath:/META-INF/mybatisConfig.xml"/>  
+  		<property name="mapperLocations" value="classpath:/META-INF/mybatisMapper.xml"/> 
 		</bean>
 		
 		<!-- sqlSessionTemplate : SQL Query를 실행해주는 곳-->
