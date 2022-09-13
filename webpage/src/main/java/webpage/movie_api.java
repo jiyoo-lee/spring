@@ -27,8 +27,8 @@ public class movie_api {
    //GetMapping,PostMapping, PutMapping, DeleteMapping : method 속성을 사용하지 않음.
    public String apiserver(String apikey,String apidate){
       try {
-      this.apikey = apikey;
-      this.apidate = apidate;
+	      this.apikey = apikey;
+	      this.apidate = apidate;
       
          if(!this.apikey.equals(null) || !this.apikey.equals("")) {
             if(this.apikey.equals("movie_jy") && !this.apidate.equals("")) {

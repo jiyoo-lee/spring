@@ -17,11 +17,13 @@
 <property name="username" value="jeeyulee"/>
 <property name="password" value="jeeyu9400"/> 
 </bean>
+
 <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 <property name="dataSource" ref="dataSource"/>
 <property name="configLocation" value="classpath:/MEB-INF/config.xml"/>   
 <property name="mapperLocations" value="classpath:/MEB-INF/mapper.xml"/>  
 </bean>
+
 <!-- mapper에서 사용된 태그(select, insert, update,delete) 실행 -->
 <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
 	<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"/>
