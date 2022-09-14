@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="sql">
+  <!-- parameterType : 고정되어있는 값 (String,int,Integer,float) / parameterMap : Map, Hash -->
+ <select id="select_test" parameterType="String" resultType="dataDTO">
+ 	select now() now
+ </select>
+ <select id="selectOne" parameterType="String" resultType="dataDTO">
+ 	select now() now, mid, mpw from test3 where mid = #{value}
+ </select>
+ <!-- hashmap을 이용하여 파라미터값을 받음 -->
+ <select id="select_api" resultType="apiDTO" parameterType="hashmap">
+ 	 select * from api_movie where indatetime between #{value1} and #{value2}
+ </select>
+</mapper>

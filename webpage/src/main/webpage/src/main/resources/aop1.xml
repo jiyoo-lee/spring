@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	<!-- log기록을 하는 class를 load (공통처리 객체)-->
+	<bean name="logger" class="aop.aopLog"></bean>
+	
+	<!-- all methods about CRUD class load (실행처리 객체)-->
+	<bean name="member" class="aop.AopClass6"></bean>
+	
+	<!--
+	AOP 형태 구조 POJO(DI + AOP + PSA)
+	PSA : 
+	
+	 AOP : 관점 지향 프로그래밍 -->
+	<!-- aop:config : aop 환경설정 tag -->
+	<!-- aop:aspect : 공통 기능 클래스를 로드 -->
+	<!-- aop:pointcut : 해당 클래스와 함께 사용하는 형태 구조
+		expression : 필터링되는 method 형태
+		within : 특정 타입에 속하는 모든 method에 적용
+		execution : 특정 타입에 속하는 부분적 method에 적용
+		aop:before:  해당 메서드가 실행 되기전에 log 메서드가 발동
+		aop:after : 해당 메서드가 실행 되고 나서 log 메서드가 발동
+	 -->
+	<aop:config>
+		<aop:aspect id="loggeraop" ref="logger">
+		<aop:pointcut expression="within(aop.*AopClass6)" id="ptsc"/>
+		<aop:after method="logs" pointcut-ref="ptsc"/>
+		</aop:aspect>
+	</aop:config>
+	
+</beans>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+		<!-- 
+		bean 처리시 resource로 생성하여 처리 시키도록 함
+		bean : Spring => IOC 관련사항
+		class를 미리 로드 후 아이디로 담아서 처리하는 형태 
+		※ Bean tag는 개발자가 제어가 불가능한 외부 라이브러리와 같은 프로그램을 제작 또는 로드 하고싶을때 사용
+		-->
+	<bean id="aa" class="aop.AopClass1"></bean>
+<!-- 	<bean id="zbox" class="aop.AopClassBox"></bean> -->
+	
+	<!-- 데이터 의존성 값을 주입하게됨(setter) -->
+	<bean id="bb" class="aop.AopClass2">
+	<!-- name : 변수 선언한 이름과 동일한 이름으로 적용 
+		value : XML에서 값을 해당 setter로 값을 전달함
+	-->
+	<property name="box1" value="this is box1"></property>
+	<property name="box2" value="this is box2"></property>
+	</bean>
+	<!-- namespace를 이용하여 의존도 값을 주입하는 방식
+	xml namespaces p를 추가해야 p:tag 사용 가능 -->
+	<bean id="cc" class="aop.AopClass3" p:name="강감찬" p:age="33"/>
+</beans>
