@@ -67,9 +67,8 @@
 <input type="hidden" name="buyername" value="<%=buyername%>">
 <input type="hidden" name="buyertel" value="<%=buyertel%>">
 <input type="hidden" name="buyeremail" value="<%=buyeremail%>">
-<input type="hidden" name="returnUrl" value="http://localhost:8080/payment/INIstdpay_pc_return.jsp">
-<input type="hidden" name="closeUrl" value="http://localhost:8080/payment/close.jsp">
-
+<input type="hidden" name="returnUrl" value="http://jeeyulee.cafe24.com/payment/INIstdpay_pc_return.jsp">
+<input type="hidden" name="closeUrl" value="http://jeeyulee.cafe24.com/payment/close.jsp">
 <hr>
 <p>결제자 정보</p>
 <hr>
